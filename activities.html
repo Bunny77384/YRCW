@@ -122,6 +122,23 @@
             margin-top: 4px;
             /* Align icon with text */
         }
+
+        @media (max-width: 768px) {
+            .event-badge {
+                position: static;
+                /* Stack badges naturally on mobile */
+                margin-right: 10px;
+                /* Add spacing between badges */
+                display: inline-block;
+                /* Ensure they flow */
+                margin-bottom: 5px;
+            }
+
+            .event-content {
+                padding-top: 20px;
+                /* Adjust padding since badges are now in flow */
+            }
+        }
     </style>
 </head>
 
