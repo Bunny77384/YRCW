@@ -383,7 +383,7 @@ header {
 /* Highlights Section Redesign */
 .highlights-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
 }
@@ -480,6 +480,35 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Mentor Card (Shanmuga Sir) */
+.mentor-card {
+  flex: 0 1 800px;
+  /* Allow it to be wider */
+  display: flex !important;
+  flex-direction: row;
+  text-align: left;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.mentor-card .team-img-wrapper {
+  flex: 0 0 40%;
+  height: auto;
+  min-height: 300px;
+}
+
+.mentor-card .team-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .hamburger {
@@ -537,5 +566,43 @@ footer {
   .hero-logo-img {
     width: 100px;
     height: 100px;
+  }
+
+  /* Mentor Card Stacking on Mobile */
+  .mentor-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mentor-card .team-img-wrapper {
+    width: 100%;
+    height: 350px;
+    /* Specific height for mobile image */
+  }
+
+  .mentor-card .team-info {
+    padding: 25px;
+  }
+
+  /* General Mobile Adjustments */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  /* Make sure flex containers wrap */
+  .contact-container {
+    flex-direction: column;
   }
 }
