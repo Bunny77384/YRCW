@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | YRCW PESCE</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/yrcw_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .team-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .team-card {
+            flex: 0 1 320px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            text-align: center;
+            transition: all 0.4s ease;
+            position: relative;
+            border-top: 4px solid var(--primary-color);
+        }
+
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+
+        .team-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 280px;
+        }
+
+        .team-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top center;
+            /* Default for faculty/others */
+            transition: transform 0.5s ease;
+        }
+
+        /* Specific fix for Prajwal */
+        #prajwal-img {
+            object-position: center 20%;
+        }
+
+        .team-card:hover .team-img {
+            transform: scale(1.05);
+        }
+
+        .team-info {
+            padding: 25px;
+        }
+
+        .team-role {
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .team-name {
+            font-size: 1.35rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+            color: var(--bg-dark);
+        }
+
+        .team-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 15px;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .team-card:hover .team-social {
+            opacity: 1;
+        }
+
+        .team-social a {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .team-social a:hover {
+            color: var(--primary-color);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav class="navbar" data-aos="fade-down">
+                <a href="index.html" class="logo">
+                    <img src="assets/yrcw_logo.png" alt="YRCW Logo" class="nav-logo-img"> YRCW PESCE
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="team.html" class="active">Team</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section" style="background-color: #FAFAFA;">
+        <div class="container">
+            <div
+                style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 50px; margin-bottom: 80px; text-align: left;">
+                <div style="flex: 1 1 500px;" data-aos="fade-right">
+                    <h1 style="font-size: 3rem; color: var(--primary-color); margin-bottom: 20px; line-height: 1.2;">
+                        Our Dedicated <br> <span style="color: #333;">Team</span>
+                    </h1>
+                    <p style="font-size: 1.1rem; line-height: 1.8; color: #555; margin-bottom: 0;">
+                        The <strong>Youth Red Cross Wing of PESCE</strong> is powered by a dynamic blend of experienced
+                        faculty guidance and enthusiastic student leadership.
+                        Under the mentorship of our Program Officers, we strive to instill the values of humanitarian
+                        service, health awareness, and community welfare in every student.
+                    </p>
+                </div>
+
+                <div style="flex: 0 1 450px;" data-aos="fade-left">
+                    <div
+                        style="background: white; padding: 40px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.05); border-left: 6px solid var(--primary-color); position: relative;">
+                        <i class="fas fa-quote-left"
+                            style="position: absolute; top: 20px; left: 20px; font-size: 2rem; color: #f0f0f0; z-index: 0;"></i>
+                        <p
+                            style="font-style: italic; color: #333; font-weight: 600; font-size: 1.2rem; margin: 0; position: relative; z-index: 1; line-height: 1.6;">
+                            "Service to humanity is the rent we pay for our room here on earth."
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mentor Section -->
+            <div class="text-center" data-aos="fade-up">
+                <h2
+                    style="font-size: 1.8rem; border-bottom: 3px solid var(--primary-color); display: inline-block; padding-bottom: 5px; margin-bottom: 40px;">
+                    Our Mentor & Guide</h2>
+            </div>
+            <div class="team-grid" style="margin-bottom: 80px;" data-aos="fade-up">
+                <div class="team-card" style="flex: 0 1 600px; display: flex; flex-direction: row; text-align: left;">
+                    <div class="team-img-wrapper" style="flex: 0 0 40%; height: auto;">
+                        <img src="assets/Shanmuga sir.jpeg" alt="Shanmuga Sir" class="team-img">
+                    </div>
+                    <div class="team-info"
+                        style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 40px;">
+                        <p class="team-role">Ex-Program Officer</p>
+                        <h3 class="team-name" style="font-size: 1.8rem; margin-bottom: 15px;">B Shanmukha</h3>
+                        <p style="color: #666; line-height: 1.6; margin-bottom: 20px;">
+                            A prominent leader and the backbone of YRCW's formative years. As an Ex-Program Officer, his
+                            visionary
+                            guidance has shaped the wing's philosophy of selfless service. His dedication to youth
+                            empowerment and humanitarian causes continues to be a beacon of inspiration for all
+                            volunteers.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Faculty Coordinators -->
+            <div class="text-center" data-aos="fade-up">
+                <h2
+                    style="font-size: 1.8rem; border-bottom: 3px solid var(--primary-color); display: inline-block; padding-bottom: 5px; margin-bottom: 40px;">
+                    Faculty Coordinators</h2>
+            </div>
+            <div class="team-grid" style="margin-bottom: 80px;" data-aos="fade-up">
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/charan.png" alt="Dr. Charan Kumar H C" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-role">Program Officer</p>
+                        <h3 class="team-name">Dr. Charan Kumar H C</h3>
+                        <div class="team-social">
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                            <a
+                                href="https://www.linkedin.com/in/charan-kumar-120128289?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Student Coordinators -->
+            <div class="text-center" data-aos="fade-up">
+                <h2
+                    style="font-size: 1.8rem; border-bottom: 3px solid var(--primary-color); display: inline-block; padding-bottom: 5px; margin-bottom: 40px;">
+                    Student Representatives</h2>
+            </div>
+            <div class="team-grid" data-aos="fade-up">
+                <!-- Prajwal -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/prajwal.png" alt="Prajwal S Shetty" class="team-img" id="prajwal-img">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-role">President</p>
+                        <h3 class="team-name">Prajwal S Shetty</h3>
+                        <div class="team-social">
+                            <a href="https://www.instagram.com/_prajwal_s_shetty_?igsh=M2hpZGlsNWE3YmE="><i
+                                    class="fab fa-instagram"></i></a>
+                            <a
+                                href="https://www.linkedin.com/in/prajwal-s-shetty5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sujith -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/sujith.png" alt="Sujith Reddy" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-role">Vice President</p>
+                        <h3 class="team-name">Sujith Reddy</h3>
+                        <div class="team-social">
+                            <a href="https://www.instagram.com/sujithreddy____007?igsh=Zno2NXAzMHpoOG9l"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a
+                                href="https://www.linkedin.com/in/sujith-reddy-219775266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bindushree -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/bindushree.png" alt="Bindushree" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-role">Secretary</p>
+                        <h3 class="team-name">Bindushree S</h3>
+                        <div class="team-social">
+                            <a href="https://www.instagram.com/bindu_siddraju?igsh=Z3YyYnVpZ3Mya2o0"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a
+                                href="https://www.linkedin.com/in/bindushree5?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Chinmay -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/chinmayi.png" alt="Chinmay" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-role">Co-secretary</p>
+                        <h3 class="team-name">Chinmay J</h3>
+                        <div class="team-social">
+                            <a href="https://www.instagram.com/chinmay_cj7?igsh=OGI4Y2t0YmRkMXZv"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a href="https://www.instagram.com/chinmay_cj7?igsh=OGI4Y2t0YmRkMXZv"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sohan -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/sohan.png" alt="Sohan" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-role">Co-secretary</p>
+                        <h3 class="team-name">Sohan N U</h3>
+                        <div class="team-social">
+                            <a href="https://www.instagram.com/the_pheonix_313?igsh=MW9yeDFhOHpydGYzNA=="><i
+                                    class="fab fa-instagram"></i></a>
+                            <a
+                                href="https://www.linkedin.com/in/sohan-nayak-b645a6303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Dhanush -->
+                <div class="team-card">
+                    <div class="team-img-wrapper">
+                        <img src="assets/dhanush.png" alt="Dhanush" class="team-img">
+                    </div>
+                    <div class="team-info">
+                        <p class="team-role">Treasurer</p>
+                        <h3 class="team-name">Dhanush B</h3>
+                        <div class="team-social">
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a
+                                href="https://www.linkedin.com/in/dhanush-b-6151281b3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i
+                                    class="fab fa-linkedin"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll To Top Button -->
+    <button id="scrollTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>About YRCW</h4>
+                    <p style="color: #ccc;">A student wing of the Red Cross Society, dedicated to humanitarian
+                        services
+                        and health awareness within the college and community.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="team.html">Our Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Connect</h4>
+                    <div style="display: flex; gap: 1rem; margin-top: 0.5rem;">
+                        <a href="https://www.instagram.com/pesce.yrcw?igsh=dXppNGFpZTRqN2Ux" target="_blank"
+                            title="Instagram"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="https://www.linkedin.com/in/yrcw-pesce?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                            target="_blank" title="LinkedIn"><i class="fab fa-linkedin fa-lg"></i></a>
+                        <a href="mailto:yrcw@pesce.ac.in" title="Email"><i class="fas fa-envelope fa-lg"></i></a>
+                        <a href="https://pesce.ac.in/" target="_blank" title="College Website"><i
+                                class="fas fa-globe fa-lg"></i></a>
+                        <a href="https://redcrosskarnataka.org/youth-red-cross/" target="_blank"
+                            title="Karnataka YRCW"><i class="fas fa-building fa-lg"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 Youth Red Cross Wing. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
